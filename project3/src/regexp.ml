@@ -26,8 +26,79 @@ let fresh =
 (* Part 3: Regular Expressions *)
 (*******************************)
 
+let rec elem x a =
+  match a with
+  | h::t -> (h = x) || (elem x t)
+  | [] -> false
+
+let rec insert x a =
+  if not (elem x a) then x::a else a
+
+let rec union a b =
+  match a with
+  | h::t -> insert h (union t b)
+  | [] ->
+    (match b with
+     | h::t -> insert h (union [] t)
+     | [] -> [])
+
+let rec regexp_to_nfa_rec (regexp: regexp_t) : (int, char) nfa_t =
+  match regexp with
+  | Empty_String -> let state1 = fresh () in
+    let state2 = fresh () in
+      {sigma = [];
+      qs = [state1;state2];
+      q0 = state1;
+      fs = [state2];
+      delta = [(state1, None, state2)];
+      }
+  | Char(c) ->let state1 = fresh () in
+    let state2 = fresh () in
+      {sigma = [c];
+      qs = [state1;state2];
+      q0 = state1;
+      fs = [state2];
+      delta = [(state1, Some c, state2)];
+      }
+  | Union(reg1, reg2) -> let nfa1 = regexp_to_nfa_rec reg1 in
+    let nfa2 = regexp_to_nfa_rec reg2 in
+    let state1 = fresh () in
+    let state2 = fresh () in
+      {sigma = (union nfa1.sigma nfa2.sigma);
+      qs = insert state2 (insert state1 (union nfa1.qs nfa2.qs));
+      q0 = state1;
+      fs = [state2];
+      delta = insert (state1, None, nfa2.q0) (insert (state1, None, nfa1.q0) (insert ((match nfa2.fs with 
+      | [] -> failwith "nfa1 has no final state"
+      | f::rest -> f), None, state2) (insert ((match nfa1.fs with 
+      | [] -> failwith "nfa2 has no final state"
+      | f::rest -> f), None, state2) (union nfa1.delta nfa2.delta))))
+      }
+  | Concat(reg1, reg2) -> let nfa1 = regexp_to_nfa_rec reg1 in
+    let nfa2 = regexp_to_nfa_rec reg2 in
+      {sigma = (union nfa1.sigma nfa2.sigma);
+      qs = (union nfa1.qs nfa2.qs);
+      q0 = nfa1.q0;
+      fs = nfa2.fs;
+      delta = insert ((match nfa1.fs with 
+                      | [] -> failwith "nfa1 has no final state"
+                      | f::rest -> f), None, nfa2.q0) (union nfa1.delta nfa2.delta)
+      }
+  | Star(reg) -> let nfa = regexp_to_nfa_rec reg in
+    let state1 = fresh () in
+    let state2 = fresh () in
+      {sigma = nfa.sigma;
+      qs = insert state2 (insert state1 nfa.qs);
+      q0 = state1;
+      fs = [state2];
+      delta = insert (state1, None, state2) (insert (state2, None, state1) 
+      (insert (state1, None, nfa.q0) (insert ((match nfa.fs with 
+      | [] -> failwith "nfa has no final state"
+      | f::rest -> f), None, state2) (nfa.delta))))
+      }
+
 let regexp_to_nfa (regexp: regexp_t) : (int, char) nfa_t =
-  failwith "unimplemented"
+  regexp_to_nfa_rec regexp
 
 (*****************************************************************)
 (* Below this point is parser code that YOU DO NOT NEED TO TOUCH *)

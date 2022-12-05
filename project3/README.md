@@ -96,8 +96,14 @@ let nfa_ex = {
     qs = [0; 1; 2];
     q0 = 0;
     fs = [2];
-    delta = [(0, Some 'a', 1); (1, None, 2)]
+    delta = [(0, Some 'a', 1); (1, None, 2); (2, None, 3); (3, None, 1)]
 }
+
+let reg_test = Star(Union(Concat(Char('a'),Char('b')),Concat(Char('c'),(Char('d')))))
+let nfa_test = regexp_to_nfa reg_test
+let dfa_test = nfa_to_dfa nfa_test
+((((e)*)|((f*)))|((ab)|(cd))*)
+let reg_test = Union(Union(Star(Concat(Empty_String,Char('e'))),Concat(Star(Char('f')),Star(Empty_String))),Star(Union(Concat(Char('a'),Char('b')),Concat(Char('c'),(Char('d'))))));;
 ```
 
 This looks like:
