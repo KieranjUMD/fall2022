@@ -1,0 +1,56 @@
+2022-11-28T02:42:44+00:00 kgjpc#01 I: Start test public:0:public_nothing.
+2022-11-28T02:42:44+00:00 kgjpc#01 I: Test public:0:public_nothing is successful.
+2022-11-28T02:42:44+00:00 kgjpc#01 I: End test public:0:public_nothing.
+2022-11-28T02:42:44+00:00 kgjpc#01 I: Start test public:2:public_mutop_simple_def_and_let.
+2022-11-28T02:42:44+00:00 kgjpc#01 I: Test public:2:public_mutop_simple_def_and_let is successful.
+2022-11-28T02:42:44+00:00 kgjpc#01 I: End test public:2:public_mutop_simple_def_and_let.
+2022-11-28T02:42:44+00:00 kgjpc#01 I: Start test public:4:public_expr_apply.
+2022-11-28T02:42:44+00:00 kgjpc#01 E: Test public:4:public_expr_apply exited with an error.
+2022-11-28T02:42:44+00:00 kgjpc#01 E: P4b.Eval.DeclareError("Unbound variable add1") in test public:4:public_expr_apply.
+2022-11-28T02:42:44+00:00 kgjpc#01 E: Raised at P4b__Eval.lookup in file "src/eval.ml", line 17, characters 10-56
+2022-11-28T02:42:44+00:00 kgjpc#01 E: Called from P4b__Eval.eval_expr in file "src/eval.ml", line 195, characters 12-35
+2022-11-28T02:42:44+00:00 kgjpc#01 E: Called from P4b__Eval.eval_expr in file "src/eval.ml", line 193, characters 10-31
+2022-11-28T02:42:44+00:00 kgjpc#01 E: Called from TestUtils.eval_expr_ast in file "test/testUtils.ml" (inlined), line 29, characters 29-44
+2022-11-28T02:42:44+00:00 kgjpc#01 E: Called from Dune__exe__Public.public_expr_apply in file "test/public/public.ml", line 37, characters 17-37
+2022-11-28T02:42:44+00:00 kgjpc#01 E: Called from OUnitRunner.run_one_test.(fun) in file "src/lib/ounit2/advanced/oUnitRunner.ml", line 83, characters 13-26
+2022-11-28T02:42:44+00:00 kgjpc#01 E: 
+2022-11-28T02:42:44+00:00 kgjpc#01 I: End test public:4:public_expr_apply.
+2022-11-28T02:42:44+00:00 kgjpc#01 I: Start test public:5:public_expr_double_fun.
+2022-11-28T02:42:44+00:00 kgjpc#01 I: Test public:5:public_expr_double_fun is successful.
+2022-11-28T02:42:44+00:00 kgjpc#01 I: End test public:5:public_expr_double_fun.
+2022-11-28T02:42:44+00:00 kgjpc#01 I: Start test public:8:public_expr_minus_one.
+2022-11-28T02:42:44+00:00 kgjpc#01 I: Test public:8:public_expr_minus_one is successful.
+2022-11-28T02:42:44+00:00 kgjpc#01 I: End test public:8:public_expr_minus_one.
+2022-11-28T02:42:44+00:00 kgjpc#01 I: Start test public:9:public_expr_nested_let.
+2022-11-28T02:42:44+00:00 kgjpc#01 I: Test public:9:public_expr_nested_let is successful.
+2022-11-28T02:42:44+00:00 kgjpc#01 I: End test public:9:public_expr_nested_let.
+2022-11-28T02:42:44+00:00 kgjpc#01 I: Start test public:12:public_expr_simple_div.
+2022-11-28T02:42:44+00:00 kgjpc#01 I: Test public:12:public_expr_simple_div is successful.
+2022-11-28T02:42:44+00:00 kgjpc#01 I: End test public:12:public_expr_simple_div.
+2022-11-28T02:42:44+00:00 kgjpc#01 I: Start test public:13:public_expr_simple_mult.
+2022-11-28T02:42:44+00:00 kgjpc#01 I: Test public:13:public_expr_simple_mult is successful.
+2022-11-28T02:42:44+00:00 kgjpc#01 I: End test public:13:public_expr_simple_mult.
+2022-11-28T02:42:44+00:00 kgjpc#01 I: Start test public:16:public_expr_single_and.
+2022-11-28T02:42:44+00:00 kgjpc#01 I: Test public:16:public_expr_single_and is successful.
+2022-11-28T02:42:44+00:00 kgjpc#01 I: End test public:16:public_expr_single_and.
+2022-11-28T02:42:44+00:00 kgjpc#01 I: Start test public:18:public_expr_single_fun.
+2022-11-28T02:42:44+00:00 kgjpc#01 I: Test public:18:public_expr_single_fun is successful.
+2022-11-28T02:42:44+00:00 kgjpc#01 I: End test public:18:public_expr_single_fun.
+2022-11-28T02:42:44+00:00 kgjpc#01 I: Start test public:19:public_expr_single_if.
+2022-11-28T02:42:44+00:00 kgjpc#01 I: Test public:19:public_expr_single_if is successful.
+2022-11-28T02:42:44+00:00 kgjpc#01 I: End test public:19:public_expr_single_if.
+2022-11-28T02:42:44+00:00 kgjpc#01 I: Start test public:22:public_expr_single_not.
+2022-11-28T02:42:44+00:00 kgjpc#01 I: Test public:22:public_expr_single_not is successful.
+2022-11-28T02:42:44+00:00 kgjpc#01 I: End test public:22:public_expr_single_not.
+2022-11-28T02:42:44+00:00 kgjpc#01 I: Start test public:24:public_expr_single_or.
+2022-11-28T02:42:44+00:00 kgjpc#01 I: Test public:24:public_expr_single_or is successful.
+2022-11-28T02:42:44+00:00 kgjpc#01 I: End test public:24:public_expr_single_or.
+2022-11-28T02:42:44+00:00 kgjpc#01 I: Start test public:26:public_err_div_by_zero.
+2022-11-28T02:42:44+00:00 kgjpc#01 I: Test public:26:public_err_div_by_zero is successful.
+2022-11-28T02:42:44+00:00 kgjpc#01 I: End test public:26:public_err_div_by_zero.
+2022-11-28T02:42:44+00:00 kgjpc#01 I: Start test public:27:public_mutop_factorial.
+2022-11-28T02:42:44+00:00 kgjpc#01 I: Test public:27:public_mutop_factorial is successful.
+2022-11-28T02:42:44+00:00 kgjpc#01 I: End test public:27:public_mutop_factorial.
+2022-11-28T02:42:44+00:00 kgjpc#01 I: Start test public:29:public_expr_shadow.
+2022-11-28T02:42:44+00:00 kgjpc#01 I: Test public:29:public_expr_shadow is successful.
+2022-11-28T02:42:44+00:00 kgjpc#01 I: End test public:29:public_expr_shadow.

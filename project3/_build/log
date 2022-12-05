@@ -1,0 +1,135 @@
+# dune runtest -f
+# OCAMLPARAM: unset
+# Shared cache: disabled
+# Workspace root: /mnt/c/Users/kgj/fall2022/project3
+# Auto-detected concurrency: 4
+$ /home/kieranj/.opam/4.12.0/bin/ocamlc.opt -config > /tmp/dune_d0befc_output
+# Dune context:
+#  { name = "default"
+#  ; kind = "default"
+#  ; profile = Dev
+#  ; merlin = true
+#  ; for_host = None
+#  ; fdo_target_exe = None
+#  ; build_dir = "default"
+#  ; toplevel_path = Some External "/home/kieranj/.opam/4.12.0/lib/toplevel"
+#  ; ocaml_bin = External "/home/kieranj/.opam/4.12.0/bin"
+#  ; ocaml = Ok External "/home/kieranj/.opam/4.12.0/bin/ocaml"
+#  ; ocamlc = External "/home/kieranj/.opam/4.12.0/bin/ocamlc.opt"
+#  ; ocamlopt = Ok External "/home/kieranj/.opam/4.12.0/bin/ocamlopt.opt"
+#  ; ocamldep = Ok External "/home/kieranj/.opam/4.12.0/bin/ocamldep.opt"
+#  ; ocamlmklib = Ok External "/home/kieranj/.opam/4.12.0/bin/ocamlmklib.opt"
+#  ; env =
+#      map
+#        { "DUNE_OCAML_HARDCODED" : "/home/kieranj/.opam/4.12.0/lib"
+#        ; "DUNE_OCAML_STDLIB" : "/home/kieranj/.opam/4.12.0/lib/ocaml"
+#        ; "DUNE_SOURCEROOT" : "/mnt/c/Users/kgj/fall2022/project3"
+#        ; "INSIDE_DUNE" : "/mnt/c/Users/kgj/fall2022/project3/_build/default"
+#        ; "OCAMLFIND_IGNORE_DUPS_IN" :
+#            "/mnt/c/Users/kgj/fall2022/project3/_build/install/default/lib"
+#        ; "OCAMLTOP_INCLUDE_PATH" :
+#            "/mnt/c/Users/kgj/fall2022/project3/_build/install/default/lib/toplevel"
+#        ; "OCAML_COLOR" : "always"
+#        ; "OPAMCOLOR" : "always"
+#        }
+#  ; findlib_paths =
+#      [ External "/mnt/c/Users/kgj/fall2022/project3/dep"
+#      ; External "/home/kieranj/.opam/4.12.0/lib"
+#      ]
+#  ; arch_sixtyfour = true
+#  ; natdynlink_supported = true
+#  ; supports_shared_libraries = true
+#  ; ocaml_config =
+#      { version = "4.12.0"
+#      ; standard_library_default = "/home/kieranj/.opam/4.12.0/lib/ocaml"
+#      ; standard_library = "/home/kieranj/.opam/4.12.0/lib/ocaml"
+#      ; standard_runtime = "the_standard_runtime_variable_was_deleted"
+#      ; ccomp_type = "cc"
+#      ; c_compiler = "gcc"
+#      ; ocamlc_cflags = [ "-O2"; "-fno-strict-aliasing"; "-fwrapv"; "-fPIC" ]
+#      ; ocamlc_cppflags = [ "-D_FILE_OFFSET_BITS=64"; "-D_REENTRANT" ]
+#      ; ocamlopt_cflags =
+#          [ "-O2"; "-fno-strict-aliasing"; "-fwrapv"; "-fPIC" ]
+#      ; ocamlopt_cppflags = [ "-D_FILE_OFFSET_BITS=64"; "-D_REENTRANT" ]
+#      ; bytecomp_c_compiler =
+#          [ "gcc"
+#          ; "-O2"
+#          ; "-fno-strict-aliasing"
+#          ; "-fwrapv"
+#          ; "-fPIC"
+#          ; "-D_FILE_OFFSET_BITS=64"
+#          ; "-D_REENTRANT"
+#          ]
+#      ; bytecomp_c_libraries = [ "-lm"; "-ldl"; "-lpthread" ]
+#      ; native_c_compiler =
+#          [ "gcc"
+#          ; "-O2"
+#          ; "-fno-strict-aliasing"
+#          ; "-fwrapv"
+#          ; "-fPIC"
+#          ; "-D_FILE_OFFSET_BITS=64"
+#          ; "-D_REENTRANT"
+#          ]
+#      ; native_c_libraries = [ "-lm"; "-ldl" ]
+#      ; native_pack_linker = [ "ld"; "-r"; "-o" ]
+#      ; cc_profile = []
+#      ; architecture = "amd64"
+#      ; model = "default"
+#      ; int_size = 63
+#      ; word_size = 64
+#      ; system = "linux"
+#      ; asm = [ "as" ]
+#      ; asm_cfi_supported = true
+#      ; with_frame_pointers = false
+#      ; ext_exe = ""
+#      ; ext_obj = ".o"
+#      ; ext_asm = ".s"
+#      ; ext_lib = ".a"
+#      ; ext_dll = ".so"
+#      ; os_type = "Unix"
+#      ; default_executable_name = "a.out"
+#      ; systhread_supported = true
+#      ; host = "x86_64-pc-linux-gnu"
+#      ; target = "x86_64-pc-linux-gnu"
+#      ; profiling = false
+#      ; flambda = false
+#      ; spacetime = false
+#      ; safe_string = true
+#      ; exec_magic_number = "Caml1999X029"
+#      ; cmi_magic_number = "Caml1999I029"
+#      ; cmo_magic_number = "Caml1999O029"
+#      ; cma_magic_number = "Caml1999A029"
+#      ; cmx_magic_number = "Caml1999Y029"
+#      ; cmxa_magic_number = "Caml1999Z029"
+#      ; ast_impl_magic_number = "Caml1999M029"
+#      ; ast_intf_magic_number = "Caml1999N029"
+#      ; cmxs_magic_number = "Caml1999D029"
+#      ; cmt_magic_number = "Caml1999T029"
+#      ; natdynlink_supported = true
+#      ; supports_shared_libraries = true
+#      ; windows_unicode = false
+#      }
+#  }
+$ (cd _build/default && /home/kieranj/.opam/4.12.0/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -I test/student/.student.eobjs/byte -I /home/kieranj/.opam/4.12.0/lib/oUnit -I /home/kieranj/.opam/4.12.0/lib/ounit2 -I /home/kieranj/.opam/4.12.0/lib/ounit2/advanced -I /home/kieranj/.opam/4.12.0/lib/seq -I /home/kieranj/.opam/4.12.0/lib/stdlib-shims -I src/.p3.objs/byte -I test/.testUtils.objs/byte -no-alias-deps -opaque -o test/student/.student.eobjs/byte/dune__exe__Student.cmo -c -impl test/student/student.ml)
+> File "test/student/student.ml", line 1, characters 0-11:
+> 1 | open P3.Nfa
+>     ^^^^^^^^^^^
+> Error (warning 33 [unused-open]): unused open P3.Nfa.
+> File "test/student/student.ml", line 2, characters 0-14:
+> 2 | open P3.Regexp
+>     ^^^^^^^^^^^^^^
+> Error (warning 33 [unused-open]): unused open P3.Regexp.
+> File "test/student/student.ml", line 3, characters 0-14:
+> 3 | open TestUtils
+>     ^^^^^^^^^^^^^^
+> Error (warning 33 [unused-open]): unused open TestUtils.
+[2]
+$ (cd _build/default && /home/kieranj/.opam/4.12.0/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w -27-39-33-32 -g -I src/.p3.objs/byte -I src/.p3.objs/native -intf-suffix .ml -no-alias-deps -opaque -open P3 -o src/.p3.objs/native/p3__Nfa.cmx -c -impl src/nfa.ml)
+$ (cd _build/default && /home/kieranj/.opam/4.12.0/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w -27-39-33-32 -g -I src/.p3.objs/byte -I src/.p3.objs/native -intf-suffix .ml -no-alias-deps -opaque -open P3 -o src/.p3.objs/native/p3__Regexp.cmx -c -impl src/regexp.ml)
+$ (cd _build/default && /home/kieranj/.opam/4.12.0/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w -27-39-33-32 -g -a -o src/p3.cmxa src/.p3.objs/native/p3.cmx src/.p3.objs/native/p3__Sets.cmx src/.p3.objs/native/p3__Nfa.cmx src/.p3.objs/native/p3__Regexp.cmx)
+$ (cd _build/default && /home/kieranj/.opam/4.12.0/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -o test/public/public.exe /home/kieranj/.opam/4.12.0/lib/ocaml/str.cmxa -I /home/kieranj/.opam/4.12.0/lib/ocaml src/p3.cmxa /home/kieranj/.opam/4.12.0/lib/ocaml/unix.cmxa -I /home/kieranj/.opam/4.12.0/lib/ocaml -I /home/kieranj/.opam/4.12.0/lib/ocaml /home/kieranj/.opam/4.12.0/lib/stdlib-shims/stdlib_shims.cmxa /home/kieranj/.opam/4.12.0/lib/ounit2/advanced/oUnitAdvanced.cmxa /home/kieranj/.opam/4.12.0/lib/ounit2/oUnit.cmxa test/testUtils.cmxa test/public/.public.eobjs/native/dune__exe__Public.cmx)
+$ (cd _build/default && /home/kieranj/.opam/4.12.0/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -o test/pbt/pbt.exe /home/kieranj/.opam/4.12.0/lib/ocaml/unix.cmxa -I /home/kieranj/.opam/4.12.0/lib/ocaml -I /home/kieranj/.opam/4.12.0/lib/ocaml /home/kieranj/.opam/4.12.0/lib/qcheck-core/qcheck_core.cmxa /home/kieranj/.opam/4.12.0/lib/qcheck-core/runner/qcheck_runner.cmxa /home/kieranj/.opam/4.12.0/lib/stdlib-shims/stdlib_shims.cmxa /home/kieranj/.opam/4.12.0/lib/ounit2/advanced/oUnitAdvanced.cmxa /home/kieranj/.opam/4.12.0/lib/ounit2/oUnit.cmxa /home/kieranj/.opam/4.12.0/lib/qcheck-ounit/qcheck_ounit.cmxa /home/kieranj/.opam/4.12.0/lib/qcheck/qcheck.cmxa /home/kieranj/.opam/4.12.0/lib/ocaml/str.cmxa -I /home/kieranj/.opam/4.12.0/lib/ocaml src/p3.cmxa test/testUtils.cmxa test/pbt/.pbt.eobjs/native/dune__exe__Pbt.cmx)
+$ (cd _build/default/test/public && ./public.exe)
+> ..........
+> Ran: 10 tests in: 0.20 seconds.
+> OK

@@ -1,0 +1,17 @@
+def save
+    file = File.open("contacts.db", "w")
+    for contact in @phonebook.keys
+        num = @phonebook[contact]
+        file.puts(contact + "," + format(num))
+    file.close
+end
+
+def load
+    file = File.open("contacts.db", "r")
+    file.readlines.each do |line|
+        entry = line.split(',', 2)
+        #num = entry[1].strip
+        add(entry[0], entry[1].strip, true)
+    end
+    file.close
+end

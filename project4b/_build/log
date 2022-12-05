@@ -1,0 +1,160 @@
+# dune runtest -f
+# OCAMLPARAM: unset
+# Shared cache: disabled
+# Workspace root: /mnt/c/Users/kgj/fall2022/project4b
+# Auto-detected concurrency: 4
+$ /home/kieranj/.opam/4.12.0/bin/ocamlc.opt -config > /tmp/dune_dac7f0_output
+# Dune context:
+#  { name = "default"
+#  ; kind = "default"
+#  ; profile = Release
+#  ; merlin = true
+#  ; for_host = None
+#  ; fdo_target_exe = None
+#  ; build_dir = "default"
+#  ; toplevel_path = Some External "/home/kieranj/.opam/4.12.0/lib/toplevel"
+#  ; ocaml_bin = External "/home/kieranj/.opam/4.12.0/bin"
+#  ; ocaml = Ok External "/home/kieranj/.opam/4.12.0/bin/ocaml"
+#  ; ocamlc = External "/home/kieranj/.opam/4.12.0/bin/ocamlc.opt"
+#  ; ocamlopt = Ok External "/home/kieranj/.opam/4.12.0/bin/ocamlopt.opt"
+#  ; ocamldep = Ok External "/home/kieranj/.opam/4.12.0/bin/ocamldep.opt"
+#  ; ocamlmklib = Ok External "/home/kieranj/.opam/4.12.0/bin/ocamlmklib.opt"
+#  ; env =
+#      map
+#        { "DUNE_OCAML_HARDCODED" : "/home/kieranj/.opam/4.12.0/lib"
+#        ; "DUNE_OCAML_STDLIB" : "/home/kieranj/.opam/4.12.0/lib/ocaml"
+#        ; "DUNE_SOURCEROOT" : "/mnt/c/Users/kgj/fall2022/project4b"
+#        ; "INSIDE_DUNE" : "/mnt/c/Users/kgj/fall2022/project4b/_build/default"
+#        ; "OCAMLFIND_IGNORE_DUPS_IN" :
+#            "/mnt/c/Users/kgj/fall2022/project4b/_build/install/default/lib"
+#        ; "OCAMLPATH" :
+#            "/mnt/c/Users/kgj/fall2022/project4b/_build/install/default/lib"
+#        ; "OCAMLTOP_INCLUDE_PATH" :
+#            "/mnt/c/Users/kgj/fall2022/project4b/_build/install/default/lib/toplevel"
+#        ; "OCAML_COLOR" : "always"
+#        ; "OPAMCOLOR" : "always"
+#        }
+#  ; findlib_paths = [ External "/home/kieranj/.opam/4.12.0/lib" ]
+#  ; arch_sixtyfour = true
+#  ; natdynlink_supported = true
+#  ; supports_shared_libraries = true
+#  ; ocaml_config =
+#      { version = "4.12.0"
+#      ; standard_library_default = "/home/kieranj/.opam/4.12.0/lib/ocaml"
+#      ; standard_library = "/home/kieranj/.opam/4.12.0/lib/ocaml"
+#      ; standard_runtime = "the_standard_runtime_variable_was_deleted"
+#      ; ccomp_type = "cc"
+#      ; c_compiler = "gcc"
+#      ; ocamlc_cflags = [ "-O2"; "-fno-strict-aliasing"; "-fwrapv"; "-fPIC" ]
+#      ; ocamlc_cppflags = [ "-D_FILE_OFFSET_BITS=64"; "-D_REENTRANT" ]
+#      ; ocamlopt_cflags =
+#          [ "-O2"; "-fno-strict-aliasing"; "-fwrapv"; "-fPIC" ]
+#      ; ocamlopt_cppflags = [ "-D_FILE_OFFSET_BITS=64"; "-D_REENTRANT" ]
+#      ; bytecomp_c_compiler =
+#          [ "gcc"
+#          ; "-O2"
+#          ; "-fno-strict-aliasing"
+#          ; "-fwrapv"
+#          ; "-fPIC"
+#          ; "-D_FILE_OFFSET_BITS=64"
+#          ; "-D_REENTRANT"
+#          ]
+#      ; bytecomp_c_libraries = [ "-lm"; "-ldl"; "-lpthread" ]
+#      ; native_c_compiler =
+#          [ "gcc"
+#          ; "-O2"
+#          ; "-fno-strict-aliasing"
+#          ; "-fwrapv"
+#          ; "-fPIC"
+#          ; "-D_FILE_OFFSET_BITS=64"
+#          ; "-D_REENTRANT"
+#          ]
+#      ; native_c_libraries = [ "-lm"; "-ldl" ]
+#      ; native_pack_linker = [ "ld"; "-r"; "-o" ]
+#      ; cc_profile = []
+#      ; architecture = "amd64"
+#      ; model = "default"
+#      ; int_size = 63
+#      ; word_size = 64
+#      ; system = "linux"
+#      ; asm = [ "as" ]
+#      ; asm_cfi_supported = true
+#      ; with_frame_pointers = false
+#      ; ext_exe = ""
+#      ; ext_obj = ".o"
+#      ; ext_asm = ".s"
+#      ; ext_lib = ".a"
+#      ; ext_dll = ".so"
+#      ; os_type = "Unix"
+#      ; default_executable_name = "a.out"
+#      ; systhread_supported = true
+#      ; host = "x86_64-pc-linux-gnu"
+#      ; target = "x86_64-pc-linux-gnu"
+#      ; profiling = false
+#      ; flambda = false
+#      ; spacetime = false
+#      ; safe_string = true
+#      ; exec_magic_number = "Caml1999X029"
+#      ; cmi_magic_number = "Caml1999I029"
+#      ; cmo_magic_number = "Caml1999O029"
+#      ; cma_magic_number = "Caml1999A029"
+#      ; cmx_magic_number = "Caml1999Y029"
+#      ; cmxa_magic_number = "Caml1999Z029"
+#      ; ast_impl_magic_number = "Caml1999M029"
+#      ; ast_intf_magic_number = "Caml1999N029"
+#      ; cmxs_magic_number = "Caml1999D029"
+#      ; cmt_magic_number = "Caml1999T029"
+#      ; natdynlink_supported = true
+#      ; supports_shared_libraries = true
+#      ; windows_unicode = false
+#      }
+#  }
+$ (cd _build/default && /home/kieranj/.opam/4.12.0/bin/ocamldep.opt -modules -impl src/eval.ml) > _build/default/src/.p4b.objs/eval.ml.d
+$ (cd _build/default && /home/kieranj/.opam/4.12.0/bin/ocamlopt.opt -w -40 -g -I src/.p4b.objs/byte -I src/.p4b.objs/native -intf-suffix .ml -no-alias-deps -open P4b -o src/.p4b.objs/native/p4b__Eval.cmx -c -impl src/eval.ml)
+> File "src/eval.ml", line 204, characters 6-7:
+> 204 |     | _ -> raise (TypeError "Closure should be first part of FunctionCall")
+>             ^
+> Warning 11 [redundant-case]: this match case is unused.
+$ (cd _build/default && /home/kieranj/.opam/4.12.0/bin/ocamlopt.opt -w -40 -g -a -o src/p4b.cmxa src/.p4b.objs/native/p4b.cmx src/.p4b.objs/native/p4b__MicroCamlTypes.cmx src/.p4b.objs/native/p4b__TokenTypes.cmx src/.p4b.objs/native/p4b__Utils.cmx src/.p4b.objs/native/p4b__Parser.cmx src/.p4b.objs/native/p4b__Lexer.cmx src/.p4b.objs/native/p4b__Eval.cmx)
+$ (cd _build/default && /home/kieranj/.opam/4.12.0/bin/ocamlopt.opt -w -40 -g -o test/public/public.exe /home/kieranj/.opam/4.12.0/lib/ocaml/str.cmxa -I /home/kieranj/.opam/4.12.0/lib/ocaml src/p4b.cmxa /home/kieranj/.opam/4.12.0/lib/ocaml/unix.cmxa -I /home/kieranj/.opam/4.12.0/lib/ocaml -I /home/kieranj/.opam/4.12.0/lib/ocaml /home/kieranj/.opam/4.12.0/lib/stdlib-shims/stdlib_shims.cmxa /home/kieranj/.opam/4.12.0/lib/ounit2/advanced/oUnitAdvanced.cmxa /home/kieranj/.opam/4.12.0/lib/ounit2/oUnit.cmxa test/testUtils.cmxa test/public/.public.eobjs/native/dune__exe__Public.cmx)
+$ (cd _build/default && /home/kieranj/.opam/4.12.0/bin/ocamlopt.opt -w -40 -g -o test/pbt/pbt.exe /home/kieranj/.opam/4.12.0/lib/ocaml/str.cmxa -I /home/kieranj/.opam/4.12.0/lib/ocaml src/p4b.cmxa /home/kieranj/.opam/4.12.0/lib/ocaml/unix.cmxa -I /home/kieranj/.opam/4.12.0/lib/ocaml -I /home/kieranj/.opam/4.12.0/lib/ocaml /home/kieranj/.opam/4.12.0/lib/stdlib-shims/stdlib_shims.cmxa /home/kieranj/.opam/4.12.0/lib/ounit2/advanced/oUnitAdvanced.cmxa /home/kieranj/.opam/4.12.0/lib/ounit2/oUnit.cmxa /home/kieranj/.opam/4.12.0/lib/qcheck-core/qcheck_core.cmxa /home/kieranj/.opam/4.12.0/lib/qcheck-core/runner/qcheck_runner.cmxa /home/kieranj/.opam/4.12.0/lib/qcheck-ounit/qcheck_ounit.cmxa /home/kieranj/.opam/4.12.0/lib/qcheck/qcheck.cmxa test/testUtils.cmxa test/pbt/.pbt.eobjs/native/dune__exe__Pbt.cmx)
+$ (cd _build/default/test/public && ./public.exe)
+> ....E.........................
+> ==============================================================================
+> Error: public:4:public_expr_apply.
+>
+> File "/mnt/c/Users/kgj/fall2022/project4b/_build/default/test/public/oUnit-public-kgjpc#01.log", line 8, characters 1-1:
+> Error: public:4:public_expr_apply (in the log).
+>
+> Raised at P4b__Eval.lookup in file "src/eval.ml", line 17, characters 10-56
+> Called from P4b__Eval.eval_expr in file "src/eval.ml", line 195, characters 12-35
+> Called from P4b__Eval.eval_expr in file "src/eval.ml", line 193, characters 10-31
+> Called from TestUtils.eval_expr_ast in file "test/testUtils.ml" (inlined), line 29, characters 29-44
+> Called from Dune__exe__Public.public_expr_apply in file "test/public/public.ml", line 37, characters 17-37
+> Called from OUnitRunner.run_one_test.(fun) in file "src/lib/ounit2/advanced/oUnitRunner.ml", line 83, characters 13-26
+>
+> P4b.Eval.DeclareError("Unbound variable add1")
+> ------------------------------------------------------------------------------
+> Ran: 30 tests in: 0.18 seconds.
+> FAILED: Cases: 30 Tried: 30 Errors: 1 Failures: 0 Skip:  0 Todo: 0 Timeouts: 0.
+[1]
+$ (cd _build/default/test/pbt && ./pbt.exe)
+> ..F.
+> ==============================================================================
+> Error: pbt:3:test_operator_precedence.
+>
+> File "/mnt/c/Users/kgj/fall2022/project4b/_build/default/test/pbt/oUnit-pbt-kgjpc#01.log", line 17, characters 1-1:
+> Error: pbt:3:test_operator_precedence (in the log).
+>
+> File "src/core/QCheck2.ml", line 1815, characters 1-1:
+> Error: pbt:3:test_operator_precedence (in the code).
+>
+>
+> test `test_operator_precedence` failed on ≥ 1 cases:
+> (0, 0, 0) (after 8 shrink steps)
+>
+>
+> ------------------------------------------------------------------------------
+> Ran: 4 tests in: 0.66 seconds.
+> FAILED: Cases: 4 Tried: 4 Errors: 0 Failures: 1 Skip:  0 Todo: 0 Timeouts: 0.
+[1]

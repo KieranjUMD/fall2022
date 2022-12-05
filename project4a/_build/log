@@ -1,0 +1,140 @@
+# dune runtest -f
+# OCAMLPARAM: unset
+# Shared cache: disabled
+# Workspace root: /mnt/c/Users/kgj/fall2022/project4a
+# Auto-detected concurrency: 4
+$ /home/kieranj/.opam/4.12.0/bin/ocamlc.opt -config > /tmp/dune_4c9fdd_output
+# Dune context:
+#  { name = "default"
+#  ; kind = "default"
+#  ; profile = Dev
+#  ; merlin = true
+#  ; for_host = None
+#  ; fdo_target_exe = None
+#  ; build_dir = "default"
+#  ; toplevel_path = Some External "/home/kieranj/.opam/4.12.0/lib/toplevel"
+#  ; ocaml_bin = External "/home/kieranj/.opam/4.12.0/bin"
+#  ; ocaml = Ok External "/home/kieranj/.opam/4.12.0/bin/ocaml"
+#  ; ocamlc = External "/home/kieranj/.opam/4.12.0/bin/ocamlc.opt"
+#  ; ocamlopt = Ok External "/home/kieranj/.opam/4.12.0/bin/ocamlopt.opt"
+#  ; ocamldep = Ok External "/home/kieranj/.opam/4.12.0/bin/ocamldep.opt"
+#  ; ocamlmklib = Ok External "/home/kieranj/.opam/4.12.0/bin/ocamlmklib.opt"
+#  ; env =
+#      map
+#        { "DUNE_OCAML_HARDCODED" : "/home/kieranj/.opam/4.12.0/lib"
+#        ; "DUNE_OCAML_STDLIB" : "/home/kieranj/.opam/4.12.0/lib/ocaml"
+#        ; "DUNE_SOURCEROOT" : "/mnt/c/Users/kgj/fall2022/project4a"
+#        ; "INSIDE_DUNE" : "/mnt/c/Users/kgj/fall2022/project4a/_build/default"
+#        ; "OCAMLFIND_IGNORE_DUPS_IN" :
+#            "/mnt/c/Users/kgj/fall2022/project4a/_build/install/default/lib"
+#        ; "OCAMLPATH" :
+#            "/mnt/c/Users/kgj/fall2022/project4a/_build/install/default/lib"
+#        ; "OCAMLTOP_INCLUDE_PATH" :
+#            "/mnt/c/Users/kgj/fall2022/project4a/_build/install/default/lib/toplevel"
+#        ; "OCAML_COLOR" : "always"
+#        ; "OPAMCOLOR" : "always"
+#        }
+#  ; findlib_paths = [ External "/home/kieranj/.opam/4.12.0/lib" ]
+#  ; arch_sixtyfour = true
+#  ; natdynlink_supported = true
+#  ; supports_shared_libraries = true
+#  ; ocaml_config =
+#      { version = "4.12.0"
+#      ; standard_library_default = "/home/kieranj/.opam/4.12.0/lib/ocaml"
+#      ; standard_library = "/home/kieranj/.opam/4.12.0/lib/ocaml"
+#      ; standard_runtime = "the_standard_runtime_variable_was_deleted"
+#      ; ccomp_type = "cc"
+#      ; c_compiler = "gcc"
+#      ; ocamlc_cflags = [ "-O2"; "-fno-strict-aliasing"; "-fwrapv"; "-fPIC" ]
+#      ; ocamlc_cppflags = [ "-D_FILE_OFFSET_BITS=64"; "-D_REENTRANT" ]
+#      ; ocamlopt_cflags =
+#          [ "-O2"; "-fno-strict-aliasing"; "-fwrapv"; "-fPIC" ]
+#      ; ocamlopt_cppflags = [ "-D_FILE_OFFSET_BITS=64"; "-D_REENTRANT" ]
+#      ; bytecomp_c_compiler =
+#          [ "gcc"
+#          ; "-O2"
+#          ; "-fno-strict-aliasing"
+#          ; "-fwrapv"
+#          ; "-fPIC"
+#          ; "-D_FILE_OFFSET_BITS=64"
+#          ; "-D_REENTRANT"
+#          ]
+#      ; bytecomp_c_libraries = [ "-lm"; "-ldl"; "-lpthread" ]
+#      ; native_c_compiler =
+#          [ "gcc"
+#          ; "-O2"
+#          ; "-fno-strict-aliasing"
+#          ; "-fwrapv"
+#          ; "-fPIC"
+#          ; "-D_FILE_OFFSET_BITS=64"
+#          ; "-D_REENTRANT"
+#          ]
+#      ; native_c_libraries = [ "-lm"; "-ldl" ]
+#      ; native_pack_linker = [ "ld"; "-r"; "-o" ]
+#      ; cc_profile = []
+#      ; architecture = "amd64"
+#      ; model = "default"
+#      ; int_size = 63
+#      ; word_size = 64
+#      ; system = "linux"
+#      ; asm = [ "as" ]
+#      ; asm_cfi_supported = true
+#      ; with_frame_pointers = false
+#      ; ext_exe = ""
+#      ; ext_obj = ".o"
+#      ; ext_asm = ".s"
+#      ; ext_lib = ".a"
+#      ; ext_dll = ".so"
+#      ; os_type = "Unix"
+#      ; default_executable_name = "a.out"
+#      ; systhread_supported = true
+#      ; host = "x86_64-pc-linux-gnu"
+#      ; target = "x86_64-pc-linux-gnu"
+#      ; profiling = false
+#      ; flambda = false
+#      ; spacetime = false
+#      ; safe_string = true
+#      ; exec_magic_number = "Caml1999X029"
+#      ; cmi_magic_number = "Caml1999I029"
+#      ; cmo_magic_number = "Caml1999O029"
+#      ; cma_magic_number = "Caml1999A029"
+#      ; cmx_magic_number = "Caml1999Y029"
+#      ; cmxa_magic_number = "Caml1999Z029"
+#      ; ast_impl_magic_number = "Caml1999M029"
+#      ; ast_intf_magic_number = "Caml1999N029"
+#      ; cmxs_magic_number = "Caml1999D029"
+#      ; cmt_magic_number = "Caml1999T029"
+#      ; natdynlink_supported = true
+#      ; supports_shared_libraries = true
+#      ; windows_unicode = false
+#      }
+#  }
+$ (cd _build/default && /home/kieranj/.opam/4.12.0/bin/ocamldep.opt -modules -impl src/parser.ml) > _build/default/src/.p4a.objs/parser.ml.d
+$ (cd _build/default && /home/kieranj/.opam/4.12.0/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w -27-32-33-34-39 -g -I src/.p4a.objs/byte -I src/.p4a.objs/native -intf-suffix .ml -no-alias-deps -opaque -open P4a -o src/.p4a.objs/native/p4a__Parser.cmx -c -impl src/parser.ml)
+$ (cd _build/default && /home/kieranj/.opam/4.12.0/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w -27-32-33-34-39 -g -a -o src/p4a.cmxa src/.p4a.objs/native/p4a.cmx src/.p4a.objs/native/p4a__TokenTypes.cmx src/.p4a.objs/native/p4a__Lexer.cmx src/.p4a.objs/native/p4a__MicroCamlTypes.cmx src/.p4a.objs/native/p4a__Utils.cmx src/.p4a.objs/native/p4a__Parser.cmx)
+$ (cd _build/default && /home/kieranj/.opam/4.12.0/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -o test/public/public.exe /home/kieranj/.opam/4.12.0/lib/ocaml/str.cmxa -I /home/kieranj/.opam/4.12.0/lib/ocaml src/p4a.cmxa /home/kieranj/.opam/4.12.0/lib/ocaml/unix.cmxa -I /home/kieranj/.opam/4.12.0/lib/ocaml -I /home/kieranj/.opam/4.12.0/lib/ocaml /home/kieranj/.opam/4.12.0/lib/stdlib-shims/stdlib_shims.cmxa /home/kieranj/.opam/4.12.0/lib/ounit2/advanced/oUnitAdvanced.cmxa /home/kieranj/.opam/4.12.0/lib/ounit2/oUnit.cmxa test/testUtils.cmxa test/public/.public.eobjs/native/dune__exe__Public.cmx)
+$ (cd _build/default && /home/kieranj/.opam/4.12.0/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -o test/pbt/pbt.exe /home/kieranj/.opam/4.12.0/lib/ocaml/str.cmxa -I /home/kieranj/.opam/4.12.0/lib/ocaml src/p4a.cmxa /home/kieranj/.opam/4.12.0/lib/ocaml/unix.cmxa -I /home/kieranj/.opam/4.12.0/lib/ocaml -I /home/kieranj/.opam/4.12.0/lib/ocaml /home/kieranj/.opam/4.12.0/lib/stdlib-shims/stdlib_shims.cmxa /home/kieranj/.opam/4.12.0/lib/ounit2/advanced/oUnitAdvanced.cmxa /home/kieranj/.opam/4.12.0/lib/ounit2/oUnit.cmxa /home/kieranj/.opam/4.12.0/lib/qcheck-core/qcheck_core.cmxa /home/kieranj/.opam/4.12.0/lib/qcheck-core/runner/qcheck_runner.cmxa /home/kieranj/.opam/4.12.0/lib/qcheck-ounit/qcheck_ounit.cmxa /home/kieranj/.opam/4.12.0/lib/qcheck/qcheck.cmxa test/testUtils.cmxa test/pbt/.pbt.eobjs/native/dune__exe__Pbt.cmx)
+$ (cd _build/default/test/public && ./public.exe)
+> ..............................
+> Ran: 30 tests in: 0.19 seconds.
+> OK
+$ (cd _build/default/test/pbt && ./pbt.exe)
+> ..F.
+> ==============================================================================
+> Error: pbt:3:test_operator_precedence.
+>
+> File "/mnt/c/Users/kgj/fall2022/project4a/_build/default/test/pbt/oUnit-pbt-kgjpc#01.log", line 17, characters 1-1:
+> Error: pbt:3:test_operator_precedence (in the log).
+>
+> File "src/core/QCheck2.ml", line 1815, characters 1-1:
+> Error: pbt:3:test_operator_precedence (in the code).
+>
+>
+> test `test_operator_precedence` failed on ≥ 1 cases:
+> (0, 0, 0) (after 8 shrink steps)
+>
+>
+> ------------------------------------------------------------------------------
+> Ran: 4 tests in: 0.63 seconds.
+> FAILED: Cases: 4 Tried: 4 Errors: 0 Failures: 1 Skip:  0 Todo: 0 Timeouts: 0.
+[1]
